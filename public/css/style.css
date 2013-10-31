@@ -1,0 +1,104 @@
+html {
+	background-color: #fffee9;
+	color: #324845;
+}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	font: 100% Futura, Arial, Helvetica, sans-serif;
+}
+
+body header {
+	font-size: small;
+	font-style: italic;
+	margin: 60px 30px 10px 60px;
+}
+
+section h1 {
+	font-size: 50px;
+	margin: -5px 30px 30px 30px;
+
+}
+
+aside,section,header,footer{
+	display: block;
+}
+
+.ComingSoon {
+	width: 300px;
+	margin: 30px;
+}
+
+.thanks p {
+	width: 400px;
+	margin-left: 30px;
+}
+
+form {
+    height: 100	px;
+    width: 640px;
+    margin: 60px 80px 50px 30px;
+    padding: 1em;
+    background-color:#E9E9E9;
+    clear: right;
+}
+
+.name {
+	margin: 10px 5px 10px 5px;
+	width: 625px;
+}
+
+.email {
+	margin: 10px 5px 10px 5px;
+	width: 310px;
+}
+
+.twitter {
+	margin: 10px 5px 10px 5px;
+	width: 310px;
+}
+
+*::-webkit-input-placeholder {
+    font-family: Futura;
+}
+
+.submitButton {
+	border: 1px outset black;
+	font-family: futura;
+	background: white;
+	box-shadow: 2px 2px 3px black;
+	cursor: pointer;
+	color: #324845;
+	margin-top: -30px;
+	margin-left: 400px;
+	float: right;
+}
+
+.submitButton:hover {
+	background: blue;
+	color: white;
+}
+
+.leftcontent {
+	float: left;
+	width: 520px;
+	margin: 10px -120px 50px 30px;
+}
+.rightcontent {
+	float: right;
+	width: 450px;
+	margin: -60px 30px 30px 30px;
+}
+
+
+footer {
+	clear: both;  
+	text-align: center;
+	margin-bottom: 10px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: fixed;
+}
+

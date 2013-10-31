@@ -1,0 +1,59 @@
+<title><%= "#{@title}" %></title>
+
+<% if @user_index.to_i == -1 %>
+	
+	<h1>Suckers</h1>
+	<br>
+	<p>click anywhere on a row to see details</p>
+	<table border="1">
+	<thead>
+		<tr>
+		<% ['Name','Email', 'twitter'].each do |head| %>
+		<th><%= "#{head}" %></th>
+		<% end %>
+	</tr>
+	</thead>
+	<tbody>	
+			<%= puts "------I see suckers #{@Array_Of_Inputs} "  %>
+			<% for @currentUser in 0..@Array_Of_Inputs.length-1 do %>
+				<% @keyVisitor = "visitor#{@currentUser}"  %>						
+				<% @current_Hash = @Array_Of_Inputs[@currentUser]  %>				
+				<!-- Now we print out column using a Hash -->
+				<tr>
+					<% @current_Hash.each do |key, value| %>					
+						<td><a href='/suckers/<%= "#{@currentUser}" %>'><%= "#{value}" %></a></td>
+					<% end %>
+				</tr>		
+			<% end %>
+			
+	</tbody>	
+	</table>
+<% elsif @user_index.to_i >= 0 %>	
+	
+	<h1>Suckers</h1>
+	<p><u><a href='/suckers'>Return to listing</a></u><p>
+	
+	<table border="1">
+	<thead>
+	<tr>
+		<% ['Name','Email', 'twitter'].each do |head| %>
+		<th><%= "#{head}" %></th>
+		<% end %>
+	</tr>
+	</thead>
+	<tbody>	
+			<% @currentUser = @user_index.to_i %>
+			<% @keyVisitor = "visitor#{@currentUser}"  %>
+			<% @current_Hash = @Array_Of_Inputs[@currentUser]  %>
+			<!-- Now we print out column using a Hash -->
+			<tr>
+			<% @current_Hash.each do |key, value| %>					
+					<td><a href='/suckers/<%= "#{@currentUser}" %>'><%= "#{value}" %></a></td>
+			<% end %>
+			</tr>	
+						
+	</tbody>	
+	</table>
+	<br>
+	<br/>
+<% end %>	
